@@ -1,0 +1,24 @@
+.jsonPopUp{
+    position: fixed;
+    background-color: #22b197;
+    border-radius: 10px;
+    left: 100px;
+    z-index: 9999999999999;
+    top: 100px;
+    color: white;
+    width: 500px;
+    padding: 30px;
+}
+.jsonPopUp svg{
+    fill: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.jsonPopUp  input{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
