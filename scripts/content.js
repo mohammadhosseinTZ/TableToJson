@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 function btnClicked() {
-  let myRows = {};
+
 
   $(".toJson").click(function () {
     let rows = [];
@@ -27,8 +27,8 @@ function btnClicked() {
       });
       rows.push(a);
     });
-    myRows.myrows = rows;
-    jsonType = JSON.stringify(myRows);
+
+    jsonType = JSON.stringify(rows);
     console.log(jsonType);
     $("body").prepend(`<div class=jsonPopUp> </div>`);
 
