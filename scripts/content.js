@@ -24,24 +24,26 @@ function btnClicked() {
       let a = {};
       let jsonType = {};
       thEls.each(function (index, item) {
-    
-     
-        a[$(item).text()] = checkTd($(tdEl).get(index));
+        
+   
+        if(!$(item).has("script" , "input" , "img").length>0){
+          a[$(item).text()] = checkTd($(tdEl).get(index));
+        }else{
+          a[null]=checkTd($(tdEl).get(index));
+
+        }
+      
    
       });
       rows.push(a);
     });
     function checkTd(el) {
-      console.log($(el).find('img'));
-      if($(el).find('img').length>0){
+      if($(el).has("img" , "input").length>0){
         return null;
-      }
-      if($(el).find('input').length>0){
-        return null;
-      }
-      if($(el).text()){
+      }else{
         return $(el).text();
       }
+
     }
     jsonType = JSON.stringify(rows);
     console.log(jsonType);
